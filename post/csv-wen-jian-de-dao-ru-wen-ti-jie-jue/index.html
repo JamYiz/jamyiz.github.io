@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>CSV文件的导入 问题解决 | Gridea</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://jamyiz.github.io/favicon.ico?v=1588993995950">
+<link rel="stylesheet" href="https://jamyiz.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="如果在数据库中导入CSV文件数据时报错，应按照以下步骤检查：
+1. 如果所有CSV文件都无法导入，因检查
+	a. 是否外键配置错误
+	b. 是否导入表的顺序错误，因为有的表使用了外键，如果数据库查询不到该外键会报错。
+	
+2. CSV导入后..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://jamyiz.github.io">
+        <img src="https://jamyiz.github.io/images/avatar.png?v=1588993995950" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://jamyiz.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">CSV文件的导入 问题解决</h2>
+            <div class="post-date">2020-05-09</div>
+            
+            <div class="post-content" v-pre>
+              <p>如果在数据库中导入CSV文件数据时报错，应按照以下步骤检查：</p>
+<pre><code>1. 如果所有CSV文件都无法导入，因检查
+	a. 是否外键配置错误
+	b. 是否导入表的顺序错误，因为有的表使用了外键，如果数据库查询不到该外键会报错。
+	
+2. CSV导入后乱码
+	a. 将csv用记事本打开，并确认其编码格式为 UTF-8，如果不是请将其更改后保存。
+	b. 确保格式符合sql的导入规则。
+	
+3. 如果由于CSV文件中有日期列导致无法导入，需将CSV的日期格式进行调整。因为 mysql 只能辨识 XXXX-XX-XX 0:00 格式的日期。
+
+4. 最稳妥的方法，使用代码导入表，因为在导入过程中会自动转换格式，减少错误概率，并且这样导入是最高效的。
+</code></pre>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://jamyiz.github.io/post/hello-gridea/">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
