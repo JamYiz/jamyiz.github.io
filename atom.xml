@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jamyiz.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-05-09T03:13:28.341Z</updated>
+    <title>未来代码研究所</title>
+    <updated>2020-05-09T03:15:01.710Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jamyiz.github.io"/>
     <link rel="self" href="https://jamyiz.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://jamyiz.github.io/images/avatar.png</logo>
     <icon>https://jamyiz.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, 未来代码研究所</rights>
     <entry>
         <title type="html"><![CDATA[CSV文件的导入 问题解决]]></title>
         <id>https://jamyiz.github.io/post/csv-wen-jian-de-dao-ru-wen-ti-jie-jue/</id>
